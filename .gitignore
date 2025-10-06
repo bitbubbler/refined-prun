@@ -15,5 +15,6 @@
 # etc
 .DS_Store
 .idea
+.vscode
 **/.turbo
 vite.config.mts.timestamp-*.mjs
