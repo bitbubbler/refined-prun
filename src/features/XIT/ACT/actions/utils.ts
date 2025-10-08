@@ -106,6 +106,13 @@ export function atSameLocation(storageA: PrunApi.Store, storageB: PrunApi.Store)
   return isSameAddress(addressA, addressB);
 }
 
+function totalStorageCapacity(store: PrunApi.Store): { weight: number; volume: number } {
+  debugger;
+  const weight = store.weightCapacity - store.weightLoad;
+  const volume = store.volumeCapacity - store.volumeLoad;
+  return { weight, volume };
+}
+
 function getStoreAddress(store: PrunApi.Store) {
   switch (store.type) {
     case 'STORE': {
