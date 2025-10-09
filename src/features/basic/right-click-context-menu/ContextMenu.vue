@@ -20,11 +20,6 @@ const label = (cmd: ContextMenuCommand, materialID: string) => {
 
 <template>
   <div v-if="contextMenu.materialID" :class="$style.contextMenu" :style="contextMenu.menuStyle">
-    <div :class="[C.TileFrame.header, $style.header]">
-      <div :class="[C.TileFrame.title, C.fonts.fontSmallHeaders, C.type.typeRegular]">
-        {{ contextMenu.materialID }}
-      </div>
-    </div>
     <ul :class="[$style.contextMenuItems]">
       <ContextMenuItem
         v-for="cmd in menuCommands"
@@ -37,7 +32,11 @@ const label = (cmd: ContextMenuCommand, materialID: string) => {
 
 <style module>
 .header {
-  padding: 0 8px 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4px 0 4px 4px;
 }
 
 .contextMenu {

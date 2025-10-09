@@ -23,9 +23,15 @@ defineProps<{
 }
 
 .label {
-  padding: 0 6px 0 8px;
+  padding: 2px 4px;
   line-height: 19px;
   color: #999;
   text-transform: uppercase;
+  flex-grow: 1;
+  transition: background-color 0.1s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
 }
 </style>
