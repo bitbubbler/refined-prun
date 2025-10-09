@@ -117,4 +117,4 @@ function init() {
   });
 }
 
-features.add(import.meta.url, init, 'Right click context menu');
+features.add(import.meta.url, init, 'Right clicking on a material shows a context menu.');
